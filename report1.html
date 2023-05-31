@@ -44,7 +44,7 @@
 
   
 //球
-var sphereGeometry = new THREE.SphereGeometry( 0.8, 32, 32 ); 
+var sphereGeometry = new THREE.SphereGeometry( 1, 32, 32 ); 
 //半径、垂直方向の分割数、水平方向の分割数
 var sphereMaterial = new THREE. MeshToonMaterial( {color: 0xff00ff} );
 var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
@@ -80,8 +80,8 @@ scene.add( sphere );
 
   
       // 箱を回転させる
-      sphere.rotation.x += 0.01;
-      sphere.rotation.y += 0.01;
+      sphere.rotation.x += 0.03;
+      sphere.rotation.y += 0.03;
   
       renderer.render(scene, camera);
     };
