@@ -36,7 +36,7 @@
     
     // らせんのパラメータ
   var radius = 2; // らせんの半径
-  var height = -3; // らせんの高さ
+  var height = -2; // らせんの高さ
   var numSpirals = 5; // らせんの周回数
   var angleStep = 0.02; // らせんの角度のステップ
 
@@ -48,7 +48,7 @@ var sphereGeometry = new THREE.SphereGeometry( 0.8, 32, 32 );
 //半径、垂直方向の分割数、水平方向の分割数
 var sphereMaterial = new THREE. MeshToonMaterial( {color: 0xff00ff} );
 var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-sphere.position.set( 0, 0, -1000);
+sphere.position.set( 0, 0, -700);
 scene.add( sphere );
 
    // 平行光源1
