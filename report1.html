@@ -90,9 +90,9 @@ scene.add(sphere2); // シーンに追加
     sphere.position.set(x, y, z);  
       
       // 球体2の位置を設定
-  var x2 = radius * Math.cos(angle+MathPI); 
+  var x2 = radius * Math.cos(angle*0.8); 
   var y2 = angle * height / (2 * Math.PI * numSpirals);
-  var z2 = radius * Math.sin(angle+MathPI); 
+  var z2 = radius * Math.sin(angle*0.8); 
   sphere2.position.set(x2, y2, z2);
 
   
