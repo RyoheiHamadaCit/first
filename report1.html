@@ -43,7 +43,7 @@ var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 );
 //半径、垂直方向の分割数、水平方向の分割数
 var sphereMaterial = new THREE. MeshToonMaterial( {color: 0xff00ff} );
 var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-sphere.position.set( 0, 0, -5);
+
 scene.add( sphere );
 
    // 平行光源1
@@ -68,6 +68,10 @@ scene.add( sphere );
     var x = radius * Math.cos(angle);
     var y = angle * height / (2 * Math.PI * numSpirals);
     var z = radius * Math.sin(angle);
+      
+     // 球体の位置を設定
+    sphere.position.set(x, y, z);
+ 
 
   
       // 箱を回転させる
