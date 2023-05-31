@@ -27,6 +27,15 @@
   
     // カメラを作成
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+    
+    // らせんのパラメータ
+  var radius = 2; // らせんの半径
+  var height = 10; // らせんの高さ
+  var numSpirals = 5; // らせんの周回数
+  var angleStep = 0.05; // らせんの角度のステップ
+
+  var angle = 0; // 初期角度
+
   
 //球
 var sphereGeometry = new THREE.SphereGeometry( 0.7, 70, 32 ); 
@@ -46,10 +55,22 @@ scene.add( sphere );
     directionalLight2.position.set(-1, 1, 1);
     // シーンに追加
     scene.add(directionalLight2);
-  
+
     // 初回実行
     var update = function() {
       requestAnimationFrame(update);
+      
+      // 角度を更新
+    angle += angleStep;
+
+    // らせん状の移動を計算
+    var x = radius * Math.cos(angle);
+    var y = angle * height / (2 * Math.PI * numSpirals);
+    var z = radius * Math.sin(angle);
+
+    // 球体の位置を設定
+    sphere.position.set(x, y, z);
+
   
       // 箱を回転させる
       sphere.rotation.x += 0.01;
