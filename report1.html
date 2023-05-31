@@ -74,6 +74,10 @@ scene.add(sphere2); // シーンに追加
     var update = function() {
       requestAnimationFrame(update);
       
+      // 箱を回転させる
+      sphere.rotation.x += 0.01;
+      sphere.rotation.y += 0.01;
+      
       // 角度を更新
     angle += angleStep;
 
