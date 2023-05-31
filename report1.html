@@ -50,6 +50,13 @@ var sphereMaterial = new THREE. MeshToonMaterial( {color: 0xff00ff} );
 var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
 sphere.position.set( 0, 0, -700);
 scene.add( sphere );
+    
+// 別の位置に球体を作成
+var sphere2Geometry = new THREE.SphereGeometry(2, 32, 32);
+var sphere2Material = new THREE.MeshToonMaterial({ color: 0xffff00 });
+var sphere2 = new THREE.Mesh(sphere2Geometry, sphere2Material);
+sphere2.position.set(5, 0, -700); // 球体の位置を設定
+scene.add(sphere2); // シーンに追加
 
    // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
