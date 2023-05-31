@@ -63,11 +63,6 @@ scene.add(sphere2); // シーンに追加
     directionalLight1.position.set(1, 1, 1);
     // シーンに追加
     scene.add(directionalLight1);
-    // 平行光源2
-        var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-    directionalLight2.position.set(-1, 1, 1);
-    // シーンに追加
-    scene.add(directionalLight2);
 
     // 初回実行
     var update = function() {
@@ -85,9 +80,9 @@ scene.add(sphere2); // シーンに追加
     sphere.position.set(x, y, z);  
       
       // 球体2の位置を設定
-  var x2 = radius * Math.cos(angle * 0.5); // 球体2の移動速度を調整するために角度を変更
+  var x2 = radius * Math.cos(angle * 0.8); // 球体2の移動速度を調整するために角度を変更
   var y2 = angle * height / (2 * Math.PI * numSpirals);
-  var z2 = radius * Math.sin(angle * 0.5); // 球体2の移動速度を調整するために角度を変更
+  var z2 = radius * Math.sin(angle * 0.8); // 球体2の移動速度を調整するために角度を変更
   sphere2.position.set(x2, y2, z2);
 
  
