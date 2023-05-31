@@ -27,13 +27,18 @@
   
     // カメラを作成
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+    
+     // カメラの位置と注視点を調整
+  camera.position.set(0, 10, 30);
+  camera.lookAt(new THREE.Vector3(0, 0, 0));
+
 
     
     // らせんのパラメータ
   var radius = 2; // らせんの半径
   var height = -5; // らせんの高さ
   var numSpirals = 5; // らせんの周回数
-  var angleStep = 0.05; // らせんの角度のステップ
+  var angleStep = 0.01; // らせんの角度のステップ
 
   var angle = 0; // 初期角度
 
