@@ -38,7 +38,7 @@
   var radius = 7; // らせんの半径
   var height = 2; // らせんの高さ
   var numSpirals = 10; // らせんの周回数
-  var angleStep = 0.07; // らせんの角度のステップ
+  var angleStep = 0.06; // らせんの角度のステップ
 
   var angle = 0; // 初期角度
 
@@ -90,9 +90,9 @@ scene.add(sphere2); // シーンに追加
     sphere.position.set(x, y, z);  
       
       // 球体2の位置を設定
-  var x2 = radius * Math.cos(angle); // 球体1と同じ速度で移動
+  var x2 = radius * Math.cos(angle+MathPI); 
   var y2 = angle * height / (2 * Math.PI * numSpirals);
-  var z2 = radius * Math.sin(angle); // 球体1と同じ速度で移動
+  var z2 = radius * Math.sin(angle+MathPI); 
   sphere2.position.set(x2, y2, z2);
 
   
