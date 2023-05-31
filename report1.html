@@ -27,6 +27,10 @@
   
     // カメラを作成
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+    
+    // カメラの位置と注視点を調整
+  camera.position.set(0, 0, 5);
+  camera.lookAt(sphere.position);
 
     
     // らせんのパラメータ
@@ -43,7 +47,7 @@ var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 );
 //半径、垂直方向の分割数、水平方向の分割数
 var sphereMaterial = new THREE. MeshToonMaterial( {color: 0xff00ff} );
 var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-sphere.position.set( 0, 0, -100 );
+sphere.position.set( 0, 0, -5);
 scene.add( sphere );
 
    // 平行光源1
