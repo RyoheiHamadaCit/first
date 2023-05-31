@@ -26,11 +26,7 @@
     var scene = new THREE.Scene();
   
     // カメラを作成
-    var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-    
-    // カメラの位置と注視点を調整
-  camera.position.set(0, 0, 5);
-  camera.lookAt(sphere.position);
+    var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
 
     
     // らせんのパラメータ
